@@ -35,6 +35,14 @@ namespace GitExercise
                 case "m":
                     OptionsManager.Multiply(a, b);
                     break;
+                case "dr":
+                    OptionsManager.DevideRemainder(a, b);
+                    break;
+                case "ex":
+                    Console.Clear();
+                    Console.WriteLine("Goodbye");
+                    Console.ReadKey(intercept: true);
+                    return;
             }
 
             Console.WriteLine("Pres any key to close the app...");
@@ -50,10 +58,10 @@ namespace GitExercise
             }
 
             Console.WriteLine("Console Calculator App");
-            Console.WriteLine(new string(c:'-', count:15));
+            Console.WriteLine(new string(c: '-', count: 15));
 
             Console.Write("a = ");
-            double a = double.Parse(Console.ReadLine() ?? throw new InvalidOperationException;
+            a = double.Parse(Console.ReadLine() ?? throw new InvalidOperationException());
 
             switch (choice)
             {
@@ -73,6 +81,15 @@ namespace GitExercise
                     OptionsManager.SubtractAbs(a, b);
                     break;
             }
+            while (true)
+            {
+                Console.Clear();
+                Console.WriteLine("Console Calculator App");
+                Console.WriteLine(new string(c: '-', count: 15));
+
+                Console.Write("a =");
+
+            }
         }
         private static bool CheckCredentials()
         {
@@ -84,5 +101,6 @@ namespace GitExercise
         }
 
         private const string Password = "abcd1234";
+
     }
 }
