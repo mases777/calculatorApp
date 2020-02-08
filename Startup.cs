@@ -35,10 +35,25 @@ namespace GitExercise
                 case "m":
                     OptionsManager.Multiply(a, b);
                     break;
+                case "dr":
+                    OptionsManager.DevideReminder(a, b);
+                    break;
+                case "ex":
+                    Console.Clear();
+                    Console.WriteLine("Goodbye");
+                    Console.ReadKey(intercept:true);
+                    return;
             }
 
             Console.WriteLine("Pres any key to close the app...");
             Console.ReadKey(true);
         }
+        while (true)
+	{
+            Console.Clear();
+            Console.WriteLine("Console Calculator App");
+            Console.WriteLine(new string( c: '-', count: 15));
+
+            Console.Write("a =");
     }
 }
